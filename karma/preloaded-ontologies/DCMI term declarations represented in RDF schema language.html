@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>DCMI term declarations represented in RDF schema language</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="meta" href="index.shtml.rdf" />
+<link rel="stylesheet" href="/css/default.css" type="text/css" />
+<script src="/js/default.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="dcmiprint"><img src="/images/header/dcmi_logo_print.gif" 
+alt="Dublin Core (Registered Trademark) Metadata Initiative logo and catchphrase: 
+Making it easier to find information" width="227" height="91" /></div>
+
+<div class="skipnav">
+<a href="#maincontent">Jump to main content: This Page </a>
+</div>
+
+<div class="skipnav">
+<a href="/sitemap/">Jump to site map: New Page</a>
+</div>
+
+
+
+  
+  <div class="header">
+<table width="100%" cellspacing="0" cellpadding="0" style="background-color:#FFFFFF">
+<tr bgcolor="#CCCCCC"><td colspan="8" align="center"><span style="color: #ffffff;"><em>The Metadata Community &mdash; Supporting Innovation in Metadata Design, Implementation &amp; Best Practices</em></span></td></tr>
+<tr>
+<td height="100" colspan="8"><a href="/" id="dcmi-logo-title-r"><img src="/images/header/dcmi_logo.png" 
+alt="Dublin Core (Registered Trademark) logo innovation banner" height="96" align="left" /></a> <a href="http://dublincore.org/support/"><img src="/images/header/join_us.png" alt="Join us logo" title="Join us logo" height="96" align="right"/></a> 
+</td>
+</tr>
+<tr bgcolor="#CCCCCC">
+  <td width="4%"><div align="right"><div class="hidden">Global navigation options:</div></div></td>
+  <!--BANNER MENU OPTIONS: Text not in brackets is label which appears in menu -->
+  <td width="91" valign="middle"><div class="header" align="center"><a href="/" id="home">Home</a>&#160;</div></td>
+
+  <td width="161" valign="middle"><div class="header" align="center"><a href="/metadata-basics/" id="metadata-basics">Metadata Basics</a>&#160;</div></td>
+  
+  <td width="161" valign="middle"><div class="header" align="center"><a href="/specifications/" id="specifications">DCMI Specifications</a></div></td>
+  
+  <td width="217" valign="middle"><div class="header" align="center"><a href="/community-and-events/" id="community-and-events">Community and Events</a>&#160;</div></td>
+  
+  <td width="91" valign="middle"><div class="header" align="center"><a href="/support/" id="support">Join/Support</a>&#160;</div></td>
+
+  <td width="108" valign="middle"><div class="header" align="center"><a href="/about-us/" id="about-us">About Us</a>&#160;</div></td>
+  <!--END BANNER MENU OPTIONS: --> 
+  <td width="6%" >&#160;</td>
+</tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td><div align="left" class="sensemakingtoolbox" title="search">
+<form method="post" action="/cgi-bin/htsearch">
+  <table cellspacing="0" cellpadding="0">
+    <tr><td>&#160;</td>
+        <td nowrap="nowrap">
+          <p>
+            <label for="words" class="hidden">Search: </label><input type="text" value="Enter keyword" name="words" id="words" size="20" onfocus="if(this.value=='Enter keyword')this.value='';" onblur="if(this.value=='')this.value='Enter keyword';" class="search" />
+            &#160;<input type="submit" name="submit" value="Search" class="button" /></p></td>        
+        </tr>
+      </table>
+  </form>
+</div></td>
+</tr>
+</table>
+</div>
+
+<a name="maincontent" id="maincontent"></a>
+
+<h1>DCMI term declarations represented in RDF schema language</h1>
+
+<p>The Resource Description Framework (RDF) is a metadata framework that provides a degree
+of semantic interoperability among applications
+that exchange machine-understandable metadata on
+the Web. RDF Schema is a specification developed
+and maintained under the auspices of the World Wide
+Web Consortium. More information is available at <a
+href="http://www.w3.org/TR/rdf-schema/">http://www.w3.org/TR/rdf-schema/</a>.</p>
+
+<p>In accordance with the DCMI Namespace Policy 
+[<a href="#NAMESPACE">NAMESPACE</a>], DCMI identifies metadata terms
+with Uniform Resource Identifiers (URIs) in the four
+DCMI namespace URIs listed below.  These namespace URIs
+are redirected by the server http://purl.org to RDF schema
+files on the server http://dublincore.org.</p>
+
+<p>As of 2006-08-28, DCMI identifies these RDF schemas to
+browsers as being of type "application/rdf+xml".  Not all
+browsers associate a default action with "application/rdf+xml",
+so users of some browsers may be offered a choice of
+actions.  DCMI plans to improve this situation by putting
+into place "conditional redirects" to redirect most users
+from http://purl.org to the documentational Web page "DCMI
+Metadata Terms" [<a href="#TERMS">TERMS</a>].</p>
+
+<p>As the DCMI vocabularies grow and evolve, the PURL redirects
+are revised to point to successive updated RDF schemas.
+All historical changes in DCMI vocabularies are recorded in the
+document "DCMI Metadata Terms: A complete historical record"
+[<a href="#HISTORY">HISTORY</a>] and an up-to-date snapshot of
+latest versions is maintained in the file "DCMI Metadata Terms"
+[<a href="#TERMS">TERMS</a>].</p>
+
+<hr />
+<h2>RDFa representations in reverse-chronological order</h2>
+
+<p>The 2012-06-14 release of <a href="/documents/2012/06/14/dcmi-terms/">DCMI Metadata Terms</a> reflects the following changes and improvements:
+<ul>
+    <li>embedded RDF representation of DCMI metadata terms using RDF 1.1</li>
+    <li>content negotiation to serve RDF/XML, Turtle, or RDFa/HTML representations in response to browser or application requests</li>
+    <li>DCMI Type Vocabulary, always a part of the consolidated DCMI Metadata Terms document, is no longer redundantly served as a separate stand-alone document</li>
+</ul>
+
+<table border="0" cellpadding="3px">
+<tbody>
+<tr><th>Date</th><th>Location</th></tr>
+<tr><td>2012-06-14</td><td><a href="/documents/2012/06/14/dcmi-terms/">http://dublincore.org/documents/2012/06/14/dcmi-terms/</a></td></tr>
+</tbody></table>
+<hr />
+
+<hr />
+<h2>RDF/XML and Turtle representations in reverse-chronological order</h2>
+
+<h3><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a> namespace</h3>
+
+<table border="0" cellpadding="3px">
+<tbody>
+<tr><th>Date</th><th>Location</th></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dcterms.rdf">http://dublincore.org/2012/06/14/dcterms.rdf</a></td></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dcterms.ttl">http://dublincore.org/2012/06/14/dcterms.ttl</a></td></tr>
+<tr><td>2010-10-11</td><td><a href="/2010/10/11/dcterms.rdf">http://dublincore.org/2010/10/11/dcterms.rdf</a></td></tr>
+<tr><td>2008-01-14</td><td><a href="/2008/01/14/dcterms.rdf">http://dublincore.org/2008/01/14/dcterms.rdf</a></td></tr>
+<tr><td>2006-12-08</td><td><a href="/2006/12/18/dcq.rdf">http://dublincore.org/2006/12/18/dcq.rdf</a></td></tr>
+<tr><td>2006-08-28</td><td><a href="/2006/08/28/dcq.rdf">http://dublincore.org/2006/08/28/dcq.rdf</a></td></tr>
+<tr><td>2005-06-13</td><td><a href="/2005/06/13/dcq">http://dublincore.org/2005/06/13/dcq</a></td></tr>
+<tr><td>2005-01-10</td><td><a href="/2005/01/10/dcq">http://dublincore.org/2005/01/10/dcq</a></td></tr>
+<tr><td>2004-12-20</td><td><a href="/2004/12/20/dcq">http://dublincore.org/2004/12/20/dcq</a></td></tr>
+<tr><td>2004-09-20</td><td><a href="/2004/09/20/dcq">http://dublincore.org/2004/09/20/dcq</a></td></tr>
+<tr><td>2004-06-14</td><td><a href="/2004/06/14/dcq">http://dublincore.org/2004/06/14/dcq</a></td></tr>
+<tr><td>2003-03-24</td><td><a href="/2003/03/24/dcq">http://dublincore.org/2003/03/24/dcq</a></td></tr>
+<tr><td>2002-08-13</td><td><a href="/2002/08/13/dcq">http://dublincore.org/2002/08/13/dcq</a></td></tr>
+<tr><td>2001-08-14</td><td><a href="/2001/08/14/dcq">http://dublincore.org/2001/08/14/dcq</a></td></tr>
+<tr><td>2000-03-13</td><td><a href="/2000/03/13/dcq">http://dublincore.org/2000/03/13/dcq</a></td></tr>
+</tbody></table>
+<hr />
+
+<h3><a href="http://purl.org/dc/dcmitype/">http://purl.org/dc/dcmitype/</a> namespace (DCMI Type Vocabulary)</h3>
+
+<table border="0" cellpadding="3px">
+<tbody>
+<tr><th>Date</th><th>Location</th></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dctype.rdf">http://dublincore.org/2012/06/14/dctype.rdf</a></td></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dctype.ttl">http://dublincore.org/2012/06/14/dctype.ttl</a></td></tr>
+<tr><td>2010-10-11</td><td><a href="/2010/10/11/dctype.rdf">http://dublincore.org/2010/10/11/dctype.rdf</a></td></tr>
+<tr><td>2008-01-14</td><td><a href="/2008/01/14/dctype.rdf">http://dublincore.org/2008/01/14/dctype.rdf</a></td></tr>
+<tr><td>2006-08-28</td><td><a href="/2006/08/28/dctype.rdf">http://dublincore.org/2006/08/28/dctype.rdf</a></td></tr>
+<tr><td>2003-12-08</td><td><a href="/2003/12/08/dctype">http://dublincore.org/2003/12/08/dctype</a></td></tr>
+<tr><td>2003-03-24</td><td><a href="/2003/03/24/dctype">http://dublincore.org/2003/03/24/dctype</a></td></tr>
+<tr><td>2002-09-20</td><td><a href="/2002/09/20/dctype">http://dublincore.org/2002/09/20/dctype</a></td></tr>
+<tr><td>2002-08-13</td><td><a href="/2002/08/13/dctype">http://dublincore.org/2002/08/13/dctype</a></td></tr>
+<tr><td>2001-08-14</td><td><a href="/2001/08/14/dctype">http://dublincore.org/2001/08/14/dctype</a></td></tr>
+</tbody></table>
+<hr />
+
+<h3><a href="http://purl.org/dc/dcam/">http://purl.org/dc/dcam/</a> (terms used in the DCMI Abstract Model [<a href="#DCAM">DCAM</a>])</h3>
+
+
+<table border="0" cellpadding="3px">
+<tbody>
+<tr><th>Date</th><th>Location</th></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dcam.rdf">http://dublincore.org/2012/06/14/dcam.rdf</a></td></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dcam.ttl">http://dublincore.org/2012/06/14/dcam.ttl</a></td></tr>
+<tr><td>2010-10-11</td><td><a href="/2010/10/11/dcam.rdf">http://dublincore.org/2010/10/11/dcam.rdf</a></td></tr>
+<tr><td>2008-01-14</td><td><a href="/2008/01/14/dcam.rdf">http://dublincore.org/2008/01/14/dcam.rdf</a></td></tr>
+</tbody></table>
+<hr />
+
+<h3><a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a></h3>
+
+<table border="0" cellpadding="3px">
+<tbody>
+<tr><th>Date</th><th>Location</th></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dcelements.rdf">http://dublincore.org/2012/06/14/dcelements.rdf</a></td></tr>
+<tr><td>2012-06-14</td><td><a href="/2012/06/14/dcelements.ttl">http://dublincore.org/2012/06/14/dcelements.ttl</a></td></tr>
+<tr><td>2010-10-11</td><td><a href="/2010/10/11/dcelements.rdf">http://dublincore.org/2010/10/11/dcelements.rdf</a></td></tr>
+<tr><td>2008-01-14</td><td><a href="/2008/01/14/dcelements.rdf">http://dublincore.org/2008/01/14/dcelements.rdf</a></td></tr>
+<tr><td>2006-12-08</td><td><a href="/2006/12/18/dces.rdf">http://dublincore.org/2006/12/18/dces.rdf</a></td></tr>
+<tr><td>2006-08-28</td><td><a href="/2006/08/28/dces.rdf">http://dublincore.org/2006/08/28/dces.rdf</a></td></tr>
+<tr><td>2003-03-24</td><td><a href="/2003/03/24/dces">http://dublincore.org/2003/03/24/dces</a></td></tr>
+<tr><td>2002-08-13</td><td><a href="/2002/08/13/dces">http://dublincore.org/2002/08/13/dces</a></td></tr>
+<tr><td>2001-08-14</td><td><a href="/2001/08/14/dces">http://dublincore.org/2001/08/14/dces</a></td></tr>
+<tr><td>2000-03-13</td><td><a href="http://dublincore.org/2000/03/13/dces">http://dublincore.org/2000/03/13/dces</a></td></tr>
+<tr><td>2000-03-13</td><td><a href="http://dublincore.org/1999/10/27-dces">http://dublincore.org/1999/10/27-dces</a> (used non-PURL namespace)</td></tr>
+<tr><td>2000-03-13</td><td><a href="http://dublincore.org/1997/10/02-dces.xml">http://dublincore.org/1997/10/02-dces.xml</a>(used non-PURL namespace)</td></tr>
+<tr><td>2000-03-13</td><td><a href="http://dublincore.org/1997/10/02-dces">http://dublincore.org/1997/10/02-dces</a> (used non-PURL namespace)</td></tr>
+</tbody></table>
+<hr />
+
+<h2>References</h2>
+
+<dl>
+<dt><a name="NAMESPACE">&nbsp;</a>[NAMESPACE]
+</dt>
+<dd>Namespace Policy for the Dublin Core Metadata Initiative (DCMI)<br />
+<a href="/documents/dcmi-namespace/">http://dublincore.org/documents/dcmi-namespace/</a>
+</dd>
+
+
+<dt><a name="DCAM">&nbsp;</a>[DCAM]
+</dt>
+<dd>DCMI Abstract Model <br />
+<a href="/documents/abstract-model/">http://dublincore.org/documents/abstract-model/</a>
+</dd>
+
+
+<dt><a name="HISTORY">&nbsp;</a>[HISTORY]
+</dt>
+<dd>DCMI Metadata Terms: A complete historical record<br />
+<a href="/usage/terms/history/">http://dublincore.org/usage/terms/history/</a>
+</dd>
+
+<dt><a name="TERMS">&nbsp;</a>[TERMS]
+</dt>
+<dd>DCMI Metadata Terms<br />
+<a href="/documents/dcmi-terms/">http://dublincore.org/documents/dcmi-terms/</a>
+</dd>
+
+
+<dt><a name="DCMES">&nbsp;</a>[DCMES]
+</dt>
+<dd>Dublin Core Metadata Element Set, Version 1.1<br />
+<a href="/documents/dces/">http://dublincore.org/documents/dces/</a>
+</dd>
+</dl>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
+</a>
+<br />The schemas linked from this page are licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>. See the <a href="/about/copyright/#schemause">
+DCMI schema use notice</a> for further details.</p>
+
+
+
+
+<div class="footer">
+
+<table width="100%" cellspacing="0" cellpadding="0" style="background-color:#CCCCCC">
+  <tr>
+    <td width="22%" ><div align="right"><div class="hidden">Global navigation utility links:</div></div>
+    </td>
+    <td ><div class="footer-link" align="left">
+    <a href="/about/contact/index.shtml" id="contact-us" title="a wide variety of contact information related to the Dublin Core Metadata Initiative">Contact Us</a>&#160;</div>
+    </td>
+    <!--<td width="37" >&#160;</td>-->
+    <td ><div class="footer-link" align="right"><a href="/sitemap/" id="sitemap"
+    title="a hyper-linked display of how the site is organized">
+    Quick Links and Site Map</a>&#160;</div>
+    </td>
+    <td width="25%">&#160;
+    </td>
+  </tr>
+</table>
+
+<p><a href="http://validator.w3.org/check/referer">
+<img src="/images/logos/valid-xhtml10.gif" alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+
+<a href="http://jigsaw.w3.org/css-validator/check/referer"> 
+<img src="/images/logos/vcss-blue.gif" alt="Valid CSS!" width="88" height="31" /></a>
+
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />Unless indicated otherwise, DCMI documents are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>. Please see the <a href="/about/copyright/#documentnotice">DCMI Document Notice</a> for further instructions.
+</p>
+
+<p>Metadata associated with this resource: <a href="http://dublincore.org/schemas/rdfs/index.shtml.rdf">http://dublincore.org/schemas/rdfs/index.shtml.rdf</a></p>
+
+<p><a href="/about/copyright/#copyright">Copyright</a> &#169; 1995-2015 <acronym title="Dublin Core Metadata Initiative"><a href="/">DCMI</a></acronym>. All Rights Reserved. DCMI <a href="/about/copyright/#liability">liability</a>, <a href="/about/copyright/#trademark">trademark/service mark</a>, <a href="/about/copyright/#documentnotice">document use</a> and <a href="/about/software/">software licensing</a> rules apply. Your interactions with this site are in accordance with our <a href="/about/privacy/">privacy</a> statements.</p>
+<p>The Dublin Core Metadata Initiative (DCMI) is a project of ASIS&amp;T&mdash;a U.S. 501(c)(3) nonprofit under the U.S. Internal Revenue Code.  Contributions to DCMI through ASIS&amp;T are tax-deductible to the full extent of the law in the United States.<br />
+The <a href="/">DCMI Web site</a> is hosted by the <a href="http://www.nl.go.kr/" target="_blank">National Library of Korea</a>.<br />
+The <a href="http://purl.org/dcregistry" target="_blank">Dublin Core Metadata Registry</a> is hosted by the <a href="http://www.kc.tsukuba.ac.jp/index_en.html" target="_blank">Research Center for Knowledge Communities</a> at the University Of Tsukuba, Japan.</p>
+<p></p>
+</div>
+
+<div class="dcmiprint"><p>Copyright &#169; 1995-2014 DCMI. All Rights Reserved.</p>
+</div>
+<!-- Google Analytics Script, new version 2009-12-14 -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-24510931-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</body>
+</html>
