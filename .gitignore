@@ -1,2 +1,12 @@
 
-datasets/comics_201405_csv
+datasets/comics_201405_csv/raw
+
+karma/models-autosave
+
+karma/models-graphviz/
+
+karma/models-json
+
+karma/user-uploaded-files
+
+karma/alignment-graph

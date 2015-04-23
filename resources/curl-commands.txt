@@ -1,0 +1,5 @@
+curl -v -H "Accept: Accept: application/rdf+xml" http://www.europeana.eu/schemas/edm/
+
+curl -v -H "Accept: Accept: application/rdf+xml" http://dublincore.org/2012/06/14/dcelements.rdf
+
+curl -v -H "Accept: Accept: application/rdf+xml" http://dublincore.org/2012/06/14/dctype.rdf
