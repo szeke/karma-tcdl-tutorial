@@ -23,11 +23,24 @@ def blCleanAgent(name):
 
 def blTopicN(topic, index):
 	list = topic.split('/')
-	return list[index].strip()
+	return list[index].strip().replace('.','')
 
 def blTopic1(topic):
 	return blTopicN(topic,0)
 
-
 def blTopic2(topic):
 	return blTopicN(topic,1)
+
+
+def blTopicUri(topic):
+	return "topic/"+mungeForUri(topic)
+
+
+def blCollectionTitle(series, number):
+	return (series + " " + number).strip()
+
+
+def blCollectioncUri(title):
+	title = title.strip()
+	if title :
+		return "colection/"+mungeForUri(title)

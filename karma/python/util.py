@@ -76,6 +76,11 @@ def alphaNumeric(x):
     return re.sub('[^A-Za-z0-9]+', ' ', x)
 
 
+def alphaNumericOnly(x):
+    "Remove non-alphanumerics"
+    return re.sub('[^A-Za-z0-9]+', '', x)
+
+
 def numericOnly(x):
     "Remove non-numeric chars from the string x"
     return re.sub('[^0-9]+', '', x)
@@ -104,6 +109,11 @@ def fingerprintString(x):
     y = list(set(x.split()))
     y.sort()
     return '_'.join(y)
+
+
+def mungeForUri(x):
+    "Take an arbitrary string and make it into something that can be used as a URI"
+    return alphaNumericOnly(asciiChars(x)).lower()
 
 
 def md5Hash(x):
