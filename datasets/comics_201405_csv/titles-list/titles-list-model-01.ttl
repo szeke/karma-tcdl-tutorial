@@ -1,0 +1,664 @@
+@prefix radion: <http://www.w3.org/ns/radion#> .
+@prefix dpla: <http://dp.la/about/map/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix DOLCE-Lite: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbr_core: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix abc: <http://metadata.net/harmony/abc#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node19jng01bax1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "titles-list-sample.csv" ;
+	km-dev:modelPublicationTime "1429938898283"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"Publisher\"}],[{\"columnName\":\"Date of Publication\"}],[{\"columnName\":\"Physical Description\"}],[{\"columnName\":\"Place of Publication\"}],[{\"columnName\":\"BL Record ID\"}],[{\"columnName\":\"Title Name\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"Publisher\"}],[{\"columnName\":\"Date of Publication\"}],[{\"columnName\":\"Physical Description\"}],[{\"columnName\":\"Place of Publication\"}],[{\"columnName\":\"BL Record ID\"}],[{\"columnName\":\"Title Name\"}]]" ;
+	km-dev:hasModelLabel "titles-list-sample.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Title Name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/title\",
+                    \"DomainLabel\": \"dpla:SourceResource1 (add)\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title Name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title Name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Place of Publication\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"edm:Place1 (add)\",
+                    \"DomainId\": \"http://www.europeana.eu/schemas/edm/Place1\",
+                    \"DomainUri\": \"http://www.europeana.eu/schemas/edm/Place\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Place of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Place of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.europeana.eu/schemas/edm/hasType\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/Place1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP8:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.europeana.eu/schemas/edm/Place\",
+                    \"edgeId\": \"http://purl.org/dc/terms/spatial\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/Place1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Publisher\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/publisher\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publisher\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publisher\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Date of Publication\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"edm:TimeSpan1 (add)\",
+                    \"DomainId\": \"http://www.europeana.eu/schemas/edm/TimeSpan1\",
+                    \"DomainUri\": \"http://www.europeana.eu/schemas/edm/TimeSpan\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Date of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Date of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.europeana.eu/schemas/edm/hasType\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/TimeSpan1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP8:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.europeana.eu/schemas/edm/TimeSpan\",
+                    \"edgeId\": \"http://purl.org/dc/elements/1.1/date\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/TimeSpan1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Physical Description\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/elements/1.1/format\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Physical Description\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Physical Description\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BL Record ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/identifier\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 a rr:TriplesMap .
+
+_:node19jng01bax1 km-dev:hasTriplesMap km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax2 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasLogicalTable _:node19jng01bax2 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:logicalTable _:node19jng01bax2 ;
+	rr:subjectMap _:node19jng01bax3 .
+
+_:node19jng01bax1 km-dev:hasSubjectMap _:node19jng01bax3 .
+
+_:node19jng01bax3 km-dev:isPartOfMapping _:node19jng01bax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://dp.la/about/map/SourceResource1" ;
+	rr:class dpla:SourceResource ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "dpla:SourceResource1" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_10ca8668-727e-4012-88ad-fd2571754760 rr:predicate dc:date .
+
+km-dev:RefObjectMap_12d89607-7ae4-4b8c-b0e9-84c99b602f6d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_ce101ebe-8808-488f-bd7f-4283d02e2069 ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap km-dev:RefObjectMap_12d89607-7ae4-4b8c-b0e9-84c99b602f6d .
+
+km-dev:PredicateObjectMap_10ca8668-727e-4012-88ad-fd2571754760 rr:objectMap km-dev:RefObjectMap_12d89607-7ae4-4b8c-b0e9-84c99b602f6d .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:predicateObjectMap km-dev:PredicateObjectMap_10ca8668-727e-4012-88ad-fd2571754760 .
+
+km-dev:PredicateObjectMap_10ca8668-727e-4012-88ad-fd2571754760 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_10ca8668-727e-4012-88ad-fd2571754760 .
+
+km-dev:PredicateObjectMap_069eb8a7-2432-4c4d-af94-0dd93b9bcd50 rr:predicate dc:format .
+
+_:node19jng01bax4 rr:column "Physical Description" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap _:node19jng01bax4 .
+
+km-dev:PredicateObjectMap_069eb8a7-2432-4c4d-af94-0dd93b9bcd50 rr:objectMap _:node19jng01bax4 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:predicateObjectMap km-dev:PredicateObjectMap_069eb8a7-2432-4c4d-af94-0dd93b9bcd50 .
+
+km-dev:PredicateObjectMap_069eb8a7-2432-4c4d-af94-0dd93b9bcd50 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_069eb8a7-2432-4c4d-af94-0dd93b9bcd50 .
+
+km-dev:PredicateObjectMap_c4f64daa-12e7-4d1b-aadc-39792f4a2654 rr:predicate dcterms:identifier .
+
+_:node19jng01bax5 rr:column "BL Record ID" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap _:node19jng01bax5 .
+
+km-dev:PredicateObjectMap_c4f64daa-12e7-4d1b-aadc-39792f4a2654 rr:objectMap _:node19jng01bax5 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:predicateObjectMap km-dev:PredicateObjectMap_c4f64daa-12e7-4d1b-aadc-39792f4a2654 .
+
+km-dev:PredicateObjectMap_c4f64daa-12e7-4d1b-aadc-39792f4a2654 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c4f64daa-12e7-4d1b-aadc-39792f4a2654 .
+
+km-dev:PredicateObjectMap_0ee25c6e-1ebf-43cd-9b46-e3859e985a06 rr:predicate dcterms:publisher .
+
+_:node19jng01bax6 rr:column "Publisher" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap _:node19jng01bax6 .
+
+km-dev:PredicateObjectMap_0ee25c6e-1ebf-43cd-9b46-e3859e985a06 rr:objectMap _:node19jng01bax6 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:predicateObjectMap km-dev:PredicateObjectMap_0ee25c6e-1ebf-43cd-9b46-e3859e985a06 .
+
+km-dev:PredicateObjectMap_0ee25c6e-1ebf-43cd-9b46-e3859e985a06 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0ee25c6e-1ebf-43cd-9b46-e3859e985a06 .
+
+km-dev:PredicateObjectMap_19f209dd-9d4a-4a1c-8fdf-2ba116c26019 rr:predicate dcterms:spatial .
+
+km-dev:RefObjectMap_277b9355-4baf-4241-8bc0-87f674438185 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_579e1d26-4786-4c5d-be93-275b4ab6400d ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap km-dev:RefObjectMap_277b9355-4baf-4241-8bc0-87f674438185 .
+
+km-dev:PredicateObjectMap_19f209dd-9d4a-4a1c-8fdf-2ba116c26019 rr:objectMap km-dev:RefObjectMap_277b9355-4baf-4241-8bc0-87f674438185 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:predicateObjectMap km-dev:PredicateObjectMap_19f209dd-9d4a-4a1c-8fdf-2ba116c26019 .
+
+km-dev:PredicateObjectMap_19f209dd-9d4a-4a1c-8fdf-2ba116c26019 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_19f209dd-9d4a-4a1c-8fdf-2ba116c26019 .
+
+km-dev:PredicateObjectMap_d6c589d6-5c45-4ee9-9b13-2f11def97a21 rr:predicate dcterms:title .
+
+_:node19jng01bax7 rr:column "Title Name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap _:node19jng01bax7 .
+
+km-dev:PredicateObjectMap_d6c589d6-5c45-4ee9-9b13-2f11def97a21 rr:objectMap _:node19jng01bax7 .
+
+km-dev:TriplesMap_1b63b72f-68b9-4167-9209-1ae3880e4770 rr:predicateObjectMap km-dev:PredicateObjectMap_d6c589d6-5c45-4ee9-9b13-2f11def97a21 .
+
+km-dev:PredicateObjectMap_d6c589d6-5c45-4ee9-9b13-2f11def97a21 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d6c589d6-5c45-4ee9-9b13-2f11def97a21 .
+
+km-dev:TriplesMap_ce101ebe-8808-488f-bd7f-4283d02e2069 a rr:TriplesMap .
+
+_:node19jng01bax1 km-dev:hasTriplesMap km-dev:TriplesMap_ce101ebe-8808-488f-bd7f-4283d02e2069 .
+
+km-dev:TriplesMap_ce101ebe-8808-488f-bd7f-4283d02e2069 km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax8 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasLogicalTable _:node19jng01bax8 .
+
+km-dev:TriplesMap_ce101ebe-8808-488f-bd7f-4283d02e2069 rr:logicalTable _:node19jng01bax8 ;
+	rr:subjectMap _:node19jng01bax9 .
+
+_:node19jng01bax1 km-dev:hasSubjectMap _:node19jng01bax9 .
+
+_:node19jng01bax9 km-dev:isPartOfMapping _:node19jng01bax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.europeana.eu/schemas/edm/TimeSpan1" ;
+	rr:class edm:TimeSpan ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "edm:TimeSpan1" .
+
+km-dev:PredicateObjectMap_7060aa22-a107-46eb-839b-a1f09fa081cd rr:predicate skos:prefLabel .
+
+_:node19jng01bax10 rr:column "Date of Publication" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap _:node19jng01bax10 .
+
+km-dev:PredicateObjectMap_7060aa22-a107-46eb-839b-a1f09fa081cd rr:objectMap _:node19jng01bax10 .
+
+km-dev:TriplesMap_ce101ebe-8808-488f-bd7f-4283d02e2069 rr:predicateObjectMap km-dev:PredicateObjectMap_7060aa22-a107-46eb-839b-a1f09fa081cd .
+
+km-dev:PredicateObjectMap_7060aa22-a107-46eb-839b-a1f09fa081cd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7060aa22-a107-46eb-839b-a1f09fa081cd .
+
+km-dev:TriplesMap_579e1d26-4786-4c5d-be93-275b4ab6400d a rr:TriplesMap .
+
+_:node19jng01bax1 km-dev:hasTriplesMap km-dev:TriplesMap_579e1d26-4786-4c5d-be93-275b4ab6400d .
+
+km-dev:TriplesMap_579e1d26-4786-4c5d-be93-275b4ab6400d km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax11 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasLogicalTable _:node19jng01bax11 .
+
+km-dev:TriplesMap_579e1d26-4786-4c5d-be93-275b4ab6400d rr:logicalTable _:node19jng01bax11 ;
+	rr:subjectMap _:node19jng01bax12 .
+
+_:node19jng01bax1 km-dev:hasSubjectMap _:node19jng01bax12 .
+
+_:node19jng01bax12 km-dev:isPartOfMapping _:node19jng01bax1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.europeana.eu/schemas/edm/Place1" ;
+	rr:class edm:Place ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "edm:Place1" .
+
+km-dev:PredicateObjectMap_00febaf7-09b9-4805-84e0-b158ab209395 rr:predicate skos:prefLabel .
+
+_:node19jng01bax13 rr:column "Place of Publication" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasObjectMap _:node19jng01bax13 .
+
+km-dev:PredicateObjectMap_00febaf7-09b9-4805-84e0-b158ab209395 rr:objectMap _:node19jng01bax13 .
+
+km-dev:TriplesMap_579e1d26-4786-4c5d-be93-275b4ab6400d rr:predicateObjectMap km-dev:PredicateObjectMap_00febaf7-09b9-4805-84e0-b158ab209395 .
+
+km-dev:PredicateObjectMap_00febaf7-09b9-4805-84e0-b158ab209395 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jng01bax1 .
+
+_:node19jng01bax1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_00febaf7-09b9-4805-84e0-b158ab209395 .
