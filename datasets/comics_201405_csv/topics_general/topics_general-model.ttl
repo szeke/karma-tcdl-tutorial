@@ -1,0 +1,1117 @@
+@prefix radion: <http://www.w3.org/ns/radion#> .
+@prefix dpla: <http://dp.la/about/map/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix DOLCE-Lite: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbr_core: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix abc: <http://metadata.net/harmony/abc#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node19jkcefj5x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "topics_general-sample.csv" ;
+	km-dev:modelPublicationTime "1429834514022"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"BL Record ID\"}],[{\"columnName\":\"Topic-general\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"source_resource_uri\"}],[{\"columnName\":\"topic2\"}],[{\"columnName\":\"topic1_uri\"}],[{\"columnName\":\"topic2_uri\"}],[{\"columnName\":\"topic1\"}]]" ;
+	km-dev:hasModelLabel "topics_general" ;
+	km-dev:hasBaseURI "http://ex.com/data/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Topic-general\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"topic1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blTopic1(getValue(\\\"Topic-general\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Topic-general\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Topic-general\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"topic2\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blTopic2(getValue(\\\"Topic-general\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Topic-general\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://ex.com/data/\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": true,
+                    \"prefix\": \"ex\",
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": false
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"topics_general\",
+                    \"hasBaseURI\": false
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"topic1\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"skos:Concept1 (add)\",
+                    \"DomainId\": \"http://www.w3.org/2004/02/skos/core#Concept1 (add)\",
+                    \"DomainUri\": \"http://www.w3.org/2004/02/skos/core#Concept\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"topic2\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"skos:Concept2 (add)\",
+                    \"DomainId\": \"http://www.w3.org/2004/02/skos/core#Concept2 (add)\",
+                    \"DomainUri\": \"http://www.w3.org/2004/02/skos/core#Concept\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.w3.org/2004/02/skos/core#Concept\",
+                    \"edgeId\": \"http://www.w3.org/2004/02/skos/core#narrower\",
+                    \"edgeTargetId\": \"http://www.w3.org/2004/02/skos/core#Concept2\",
+                    \"edgeSourceId\": \"http://www.w3.org/2004/02/skos/core#Concept1\",
+                    \"edgeSourceUri\": \"http://www.w3.org/2004/02/skos/core#Concept1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"topic1\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"topic1_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blTopicUri(getValue(\\\"topic1\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"topic2\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"topic2_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blTopicUri(getValue(\\\"topic2\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"topic2_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.w3.org/2004/02/skos/core#Concept\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.w3.org/2004/02/skos/core#Concept2\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"skos:Concept2\",
+                    \"DomainId\": \"http://www.w3.org/2004/02/skos/core#Concept2\",
+                    \"DomainUri\": \"http://www.w3.org/2004/02/skos/core#Concept\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic2_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"topic1_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.w3.org/2004/02/skos/core#Concept\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.w3.org/2004/02/skos/core#Concept1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"skos:Concept1\",
+                    \"DomainId\": \"http://www.w3.org/2004/02/skos/core#Concept1\",
+                    \"DomainUri\": \"http://www.w3.org/2004/02/skos/core#Concept\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"topic1_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BL Record ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"source_resource_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blSourceResourceUri(getValue(\\\"BL Record ID\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source_resource_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"source_resource_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://dp.la/about/map/SourceResource\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://dp.la/about/map/SourceResource1 (add)\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"dpla:SourceResource1 (add)\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source_resource_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source_resource_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.w3.org/2004/02/skos/core#Concept1\",
+                    \"edgeId\": \"http://purl.org/dc/terms/subject\",
+                    \"edgeTargetId\": \"http://www.w3.org/2004/02/skos/core#Concept1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.w3.org/2004/02/skos/core#Concept2\",
+                    \"edgeId\": \"http://purl.org/dc/terms/subject\",
+                    \"edgeTargetId\": \"http://www.w3.org/2004/02/skos/core#Concept2\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"orderedColumns\",
+                \"value\": [
+                    {
+                        \"id\": [{\"columnName\": \"source_resource_uri\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"source_resource_uri\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Topic-general\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Topic-general\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"topic2\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"topic2\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"topic2_uri\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"topic2_uri\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"topic1\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"topic1\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"topic1_uri\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"topic1_uri\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Subject Classification\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Subject Classification\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Title\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Title\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Place of Publication\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Place of Publication\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Publisher\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Publisher\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Date of Publication\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Date of Publication\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"ISBN\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"ISBN\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"BL Record ID\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"BL Record ID\"
+                    }
+                ],
+                \"type\": \"orderedColumns\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"OrganizeColumnsCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_bcb57704-1f6a-4726-aaff-10800b83473f a rr:TriplesMap .
+
+_:node19jkcefj5x1 km-dev:hasTriplesMap km-dev:TriplesMap_bcb57704-1f6a-4726-aaff-10800b83473f .
+
+km-dev:TriplesMap_bcb57704-1f6a-4726-aaff-10800b83473f km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x2 rr:tableName "topics_general-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasLogicalTable _:node19jkcefj5x2 .
+
+km-dev:TriplesMap_bcb57704-1f6a-4726-aaff-10800b83473f rr:logicalTable _:node19jkcefj5x2 ;
+	rr:subjectMap _:node19jkcefj5x3 .
+
+_:node19jkcefj5x1 km-dev:hasSubjectMap _:node19jkcefj5x3 .
+
+_:node19jkcefj5x3 km-dev:isPartOfMapping _:node19jkcefj5x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://dp.la/about/map/SourceResource1" ;
+	rr:class dpla:SourceResource ;
+	rr:template "{source_resource_uri}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_c5b5ec0b-da6b-4fbf-9de0-b7e6ee49db97 rr:predicate dcterms:subject .
+
+km-dev:RefObjectMap_51fe015e-16a5-433b-9ad5-9eb2970e4d00 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasObjectMap km-dev:RefObjectMap_51fe015e-16a5-433b-9ad5-9eb2970e4d00 .
+
+km-dev:PredicateObjectMap_c5b5ec0b-da6b-4fbf-9de0-b7e6ee49db97 rr:objectMap km-dev:RefObjectMap_51fe015e-16a5-433b-9ad5-9eb2970e4d00 .
+
+km-dev:TriplesMap_bcb57704-1f6a-4726-aaff-10800b83473f rr:predicateObjectMap km-dev:PredicateObjectMap_c5b5ec0b-da6b-4fbf-9de0-b7e6ee49db97 .
+
+km-dev:PredicateObjectMap_c5b5ec0b-da6b-4fbf-9de0-b7e6ee49db97 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c5b5ec0b-da6b-4fbf-9de0-b7e6ee49db97 .
+
+km-dev:PredicateObjectMap_33938ea7-8507-4821-8f2e-d75972211f98 rr:predicate dcterms:subject .
+
+km-dev:RefObjectMap_0e47d1ce-0403-4a08-a259-6d24860255c0 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasObjectMap km-dev:RefObjectMap_0e47d1ce-0403-4a08-a259-6d24860255c0 .
+
+km-dev:PredicateObjectMap_33938ea7-8507-4821-8f2e-d75972211f98 rr:objectMap km-dev:RefObjectMap_0e47d1ce-0403-4a08-a259-6d24860255c0 .
+
+km-dev:TriplesMap_bcb57704-1f6a-4726-aaff-10800b83473f rr:predicateObjectMap km-dev:PredicateObjectMap_33938ea7-8507-4821-8f2e-d75972211f98 .
+
+km-dev:PredicateObjectMap_33938ea7-8507-4821-8f2e-d75972211f98 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_33938ea7-8507-4821-8f2e-d75972211f98 .
+
+km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c a rr:TriplesMap .
+
+_:node19jkcefj5x1 km-dev:hasTriplesMap km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c .
+
+km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x4 rr:tableName "topics_general-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasLogicalTable _:node19jkcefj5x4 .
+
+km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c rr:logicalTable _:node19jkcefj5x4 ;
+	rr:subjectMap _:node19jkcefj5x5 .
+
+_:node19jkcefj5x1 km-dev:hasSubjectMap _:node19jkcefj5x5 .
+
+_:node19jkcefj5x5 km-dev:isPartOfMapping _:node19jkcefj5x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.w3.org/2004/02/skos/core#Concept1" ;
+	rr:class skos:Concept ;
+	rr:template "{topic1_uri}" .
+
+km-dev:PredicateObjectMap_9df0484e-b2eb-424f-b52d-e592a379e1a1 rr:predicate skos:narrower .
+
+km-dev:RefObjectMap_e341086e-c366-4489-af8a-59d029184138 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasObjectMap km-dev:RefObjectMap_e341086e-c366-4489-af8a-59d029184138 .
+
+km-dev:PredicateObjectMap_9df0484e-b2eb-424f-b52d-e592a379e1a1 rr:objectMap km-dev:RefObjectMap_e341086e-c366-4489-af8a-59d029184138 .
+
+km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c rr:predicateObjectMap km-dev:PredicateObjectMap_9df0484e-b2eb-424f-b52d-e592a379e1a1 .
+
+km-dev:PredicateObjectMap_9df0484e-b2eb-424f-b52d-e592a379e1a1 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9df0484e-b2eb-424f-b52d-e592a379e1a1 .
+
+km-dev:PredicateObjectMap_89222ae9-4291-41bd-9279-431d0a2d5aba rr:predicate skos:prefLabel .
+
+_:node19jkcefj5x6 rr:column "topic1" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasObjectMap _:node19jkcefj5x6 .
+
+km-dev:PredicateObjectMap_89222ae9-4291-41bd-9279-431d0a2d5aba rr:objectMap _:node19jkcefj5x6 .
+
+km-dev:TriplesMap_e91ea54c-b2d3-4151-80d8-a88b9835b21c rr:predicateObjectMap km-dev:PredicateObjectMap_89222ae9-4291-41bd-9279-431d0a2d5aba .
+
+km-dev:PredicateObjectMap_89222ae9-4291-41bd-9279-431d0a2d5aba a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_89222ae9-4291-41bd-9279-431d0a2d5aba .
+
+km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 a rr:TriplesMap .
+
+_:node19jkcefj5x1 km-dev:hasTriplesMap km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 .
+
+km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x7 rr:tableName "topics_general-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasLogicalTable _:node19jkcefj5x7 .
+
+km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 rr:logicalTable _:node19jkcefj5x7 ;
+	rr:subjectMap _:node19jkcefj5x8 .
+
+_:node19jkcefj5x1 km-dev:hasSubjectMap _:node19jkcefj5x8 .
+
+_:node19jkcefj5x8 km-dev:isPartOfMapping _:node19jkcefj5x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.w3.org/2004/02/skos/core#Concept2" ;
+	rr:class skos:Concept ;
+	rr:template "{topic2_uri}" .
+
+km-dev:PredicateObjectMap_f3a0a7cb-d0bf-4cec-9703-16ce9b99e856 rr:predicate skos:prefLabel .
+
+_:node19jkcefj5x9 rr:column "topic2" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasObjectMap _:node19jkcefj5x9 .
+
+km-dev:PredicateObjectMap_f3a0a7cb-d0bf-4cec-9703-16ce9b99e856 rr:objectMap _:node19jkcefj5x9 .
+
+km-dev:TriplesMap_1e65b3e6-8c01-4e0f-9ead-1da9f325b880 rr:predicateObjectMap km-dev:PredicateObjectMap_f3a0a7cb-d0bf-4cec-9703-16ce9b99e856 .
+
+km-dev:PredicateObjectMap_f3a0a7cb-d0bf-4cec-9703-16ce9b99e856 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jkcefj5x1 .
+
+_:node19jkcefj5x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f3a0a7cb-d0bf-4cec-9703-16ce9b99e856 .
