@@ -1,0 +1,1289 @@
+@prefix radion: <http://www.w3.org/ns/radion#> .
+@prefix dpla: <http://dp.la/about/map/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix DOLCE-Lite: <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix frbr_core: <http://purl.org/vocab/frbr/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ore: <http://www.openarchives.org/ore/terms/> .
+@prefix abc: <http://metadata.net/harmony/abc#> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node19jnkbkp6x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "titles-list-sample.csv" ;
+	km-dev:modelPublicationTime "1429943472934"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"Publisher\"}],[{\"columnName\":\"Date of Publication\"}],[{\"columnName\":\"Physical Description\"}],[{\"columnName\":\"Place of Publication\"}],[{\"columnName\":\"BL Record ID\"}],[{\"columnName\":\"Title Name\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"Publisher\"}],[{\"columnName\":\"Date of Publication\"}],[{\"columnName\":\"Physical Description\"}],[{\"columnName\":\"aggregation_uri\"}],[{\"columnName\":\"source_resource_uri\"}],[{\"columnName\":\"Place of Publication\"}],[{\"columnName\":\"BL Record ID\"}],[{\"columnName\":\"Title Name\"}]]" ;
+	km-dev:hasModelLabel "titles-list" ;
+	km-dev:hasBaseURI "http://ex.com/data/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Title Name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/title\",
+                    \"DomainLabel\": \"dpla:SourceResource1 (add)\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title Name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title Name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Place of Publication\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"edm:Place1 (add)\",
+                    \"DomainId\": \"http://www.europeana.eu/schemas/edm/Place1\",
+                    \"DomainUri\": \"http://www.europeana.eu/schemas/edm/Place\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Place of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Place of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.europeana.eu/schemas/edm/hasType\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/Place1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP8:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.europeana.eu/schemas/edm/Place\",
+                    \"edgeId\": \"http://purl.org/dc/terms/spatial\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/Place1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Publisher\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/publisher\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publisher\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publisher\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Date of Publication\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2004/02/skos/core#prefLabel\",
+                    \"DomainLabel\": \"edm:TimeSpan1 (add)\",
+                    \"DomainId\": \"http://www.europeana.eu/schemas/edm/TimeSpan1\",
+                    \"DomainUri\": \"http://www.europeana.eu/schemas/edm/TimeSpan\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Date of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Date of Publication\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://www.europeana.eu/schemas/edm/hasType\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/TimeSpan1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP8:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.europeana.eu/schemas/edm/TimeSpan\",
+                    \"edgeId\": \"http://purl.org/dc/elements/1.1/date\",
+                    \"edgeTargetId\": \"http://www.europeana.eu/schemas/edm/TimeSpan1\",
+                    \"edgeSourceId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Physical Description\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/elements/1.1/format\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Physical Description\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Physical Description\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BL Record ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/dc/terms/identifier\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://ex.com/data/\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": true,
+                    \"prefix\": \"ex\",
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": false
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"titles-list\",
+                    \"hasBaseURI\": false
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP8:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeId\": \"http://www.europeana.eu/schemas/edm/aggregatedCHO\",
+                    \"edgeTargetId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"edgeSourceId\": \"http://www.openarchives.org/ore/terms/Aggregation1 (add)\",
+                    \"edgeSourceUri\": \"http://www.openarchives.org/ore/terms/Aggregation\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"literalValue\",
+                \"value\": \"British Library\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"literalType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"isUri\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"AddLiteralNodeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"British Library\",
+                    \"edgeId\": \"http://www.europeana.eu/schemas/edm/dataProvider\",
+                    \"edgeTargetId\": \"British Library1\",
+                    \"edgeSourceId\": \"http://www.openarchives.org/ore/terms/Aggregation1\",
+                    \"edgeSourceUri\": \"http://www.openarchives.org/ore/terms/Aggregation\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"BL Record ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"aggregation_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blAggregationUri(getValue(\\\"BL Record ID\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"aggregation_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"aggregation_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://www.openarchives.org/ore/terms/Aggregation\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://www.openarchives.org/ore/terms/Aggregation1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"ore:Aggregation1\",
+                    \"DomainId\": \"http://www.openarchives.org/ore/terms/Aggregation1\",
+                    \"DomainUri\": \"http://www.openarchives.org/ore/terms/Aggregation\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"aggregation_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"aggregation_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"aggregation_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"source_resource_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return blSourceResourceUri(getValue(\\\"BL Record ID\\\"))\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"BL Record ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source_resource_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"source_resource_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://dp.la/about/map/SourceResource\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://dp.la/about/map/SourceResource1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"dpla:SourceResource1\",
+                    \"DomainId\": \"http://dp.la/about/map/SourceResource1\",
+                    \"DomainUri\": \"http://dp.la/about/map/SourceResource\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source_resource_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"source_resource_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"orderedColumns\",
+                \"value\": [
+                    {
+                        \"id\": [{\"columnName\": \"Title Name\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"Title Name\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Place of Publication\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"Place of Publication\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Publisher\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"Publisher\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Date of Publication\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"Date of Publication\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Physical Description\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"Physical Description\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"source_resource_uri\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"source_resource_uri\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Part of Series\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Part of Series\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"Number in Series\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"Number in Series\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"ISBN\"}],
+                        \"visible\": true,
+                        \"hideable\": true,
+                        \"name\": \"ISBN\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"BL Record ID\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"BL Record ID\"
+                    },
+                    {
+                        \"id\": [{\"columnName\": \"aggregation_uri\"}],
+                        \"visible\": true,
+                        \"hideable\": false,
+                        \"name\": \"aggregation_uri\"
+                    }
+                ],
+                \"type\": \"orderedColumns\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"OrganizeColumnsCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 a rr:TriplesMap .
+
+_:node19jnkbkp6x1 km-dev:hasTriplesMap km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x2 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasLogicalTable _:node19jnkbkp6x2 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:logicalTable _:node19jnkbkp6x2 ;
+	rr:subjectMap _:node19jnkbkp6x3 .
+
+_:node19jnkbkp6x1 km-dev:hasSubjectMap _:node19jnkbkp6x3 .
+
+_:node19jnkbkp6x3 km-dev:isPartOfMapping _:node19jnkbkp6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://dp.la/about/map/SourceResource1" ;
+	rr:class dpla:SourceResource ;
+	rr:template "{source_resource_uri}" .
+
+km-dev:PredicateObjectMap_0be18b10-f659-473e-95d0-509bf6bae264 rr:predicate dc:date .
+
+km-dev:RefObjectMap_5f1fe0fd-e37c-4cec-b3e3-e01ac72a9609 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_e9e8bb1c-834a-48c1-9880-db6d545b0403 ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap km-dev:RefObjectMap_5f1fe0fd-e37c-4cec-b3e3-e01ac72a9609 .
+
+km-dev:PredicateObjectMap_0be18b10-f659-473e-95d0-509bf6bae264 rr:objectMap km-dev:RefObjectMap_5f1fe0fd-e37c-4cec-b3e3-e01ac72a9609 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:predicateObjectMap km-dev:PredicateObjectMap_0be18b10-f659-473e-95d0-509bf6bae264 .
+
+km-dev:PredicateObjectMap_0be18b10-f659-473e-95d0-509bf6bae264 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0be18b10-f659-473e-95d0-509bf6bae264 .
+
+km-dev:PredicateObjectMap_c36584a8-9faa-4f0b-9b52-0e9a9fc8c45a rr:predicate dc:format .
+
+_:node19jnkbkp6x4 rr:column "Physical Description" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x4 .
+
+km-dev:PredicateObjectMap_c36584a8-9faa-4f0b-9b52-0e9a9fc8c45a rr:objectMap _:node19jnkbkp6x4 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:predicateObjectMap km-dev:PredicateObjectMap_c36584a8-9faa-4f0b-9b52-0e9a9fc8c45a .
+
+km-dev:PredicateObjectMap_c36584a8-9faa-4f0b-9b52-0e9a9fc8c45a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c36584a8-9faa-4f0b-9b52-0e9a9fc8c45a .
+
+km-dev:PredicateObjectMap_255a1d05-4da6-453b-832a-72d15c19503d rr:predicate dcterms:identifier .
+
+_:node19jnkbkp6x5 rr:column "BL Record ID" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x5 .
+
+km-dev:PredicateObjectMap_255a1d05-4da6-453b-832a-72d15c19503d rr:objectMap _:node19jnkbkp6x5 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:predicateObjectMap km-dev:PredicateObjectMap_255a1d05-4da6-453b-832a-72d15c19503d .
+
+km-dev:PredicateObjectMap_255a1d05-4da6-453b-832a-72d15c19503d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_255a1d05-4da6-453b-832a-72d15c19503d .
+
+km-dev:PredicateObjectMap_059d412b-57cc-48d2-b707-bc25d4be71cd rr:predicate dcterms:publisher .
+
+_:node19jnkbkp6x6 rr:column "Publisher" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x6 .
+
+km-dev:PredicateObjectMap_059d412b-57cc-48d2-b707-bc25d4be71cd rr:objectMap _:node19jnkbkp6x6 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:predicateObjectMap km-dev:PredicateObjectMap_059d412b-57cc-48d2-b707-bc25d4be71cd .
+
+km-dev:PredicateObjectMap_059d412b-57cc-48d2-b707-bc25d4be71cd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_059d412b-57cc-48d2-b707-bc25d4be71cd .
+
+km-dev:PredicateObjectMap_42a0b583-c8b4-487e-91ba-08de38d653cb rr:predicate dcterms:spatial .
+
+km-dev:RefObjectMap_b2701b44-017d-4c5e-9842-200ba4721d43 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_dbc0be77-c10f-4eca-8366-9221e406209f ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap km-dev:RefObjectMap_b2701b44-017d-4c5e-9842-200ba4721d43 .
+
+km-dev:PredicateObjectMap_42a0b583-c8b4-487e-91ba-08de38d653cb rr:objectMap km-dev:RefObjectMap_b2701b44-017d-4c5e-9842-200ba4721d43 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:predicateObjectMap km-dev:PredicateObjectMap_42a0b583-c8b4-487e-91ba-08de38d653cb .
+
+km-dev:PredicateObjectMap_42a0b583-c8b4-487e-91ba-08de38d653cb a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_42a0b583-c8b4-487e-91ba-08de38d653cb .
+
+km-dev:PredicateObjectMap_dc5cc03c-221f-4e14-836e-74e05e5467c8 rr:predicate dcterms:title .
+
+_:node19jnkbkp6x7 rr:column "Title Name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x7 .
+
+km-dev:PredicateObjectMap_dc5cc03c-221f-4e14-836e-74e05e5467c8 rr:objectMap _:node19jnkbkp6x7 .
+
+km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 rr:predicateObjectMap km-dev:PredicateObjectMap_dc5cc03c-221f-4e14-836e-74e05e5467c8 .
+
+km-dev:PredicateObjectMap_dc5cc03c-221f-4e14-836e-74e05e5467c8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dc5cc03c-221f-4e14-836e-74e05e5467c8 .
+
+km-dev:TriplesMap_e9e8bb1c-834a-48c1-9880-db6d545b0403 a rr:TriplesMap .
+
+_:node19jnkbkp6x1 km-dev:hasTriplesMap km-dev:TriplesMap_e9e8bb1c-834a-48c1-9880-db6d545b0403 .
+
+km-dev:TriplesMap_e9e8bb1c-834a-48c1-9880-db6d545b0403 km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x8 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasLogicalTable _:node19jnkbkp6x8 .
+
+km-dev:TriplesMap_e9e8bb1c-834a-48c1-9880-db6d545b0403 rr:logicalTable _:node19jnkbkp6x8 ;
+	rr:subjectMap _:node19jnkbkp6x9 .
+
+_:node19jnkbkp6x1 km-dev:hasSubjectMap _:node19jnkbkp6x9 .
+
+_:node19jnkbkp6x9 km-dev:isPartOfMapping _:node19jnkbkp6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.europeana.eu/schemas/edm/TimeSpan1" ;
+	rr:class edm:TimeSpan ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "edm:TimeSpan1" .
+
+km-dev:PredicateObjectMap_db4dfa03-b329-406e-bf79-5b5c21bec02a rr:predicate skos:prefLabel .
+
+_:node19jnkbkp6x10 rr:column "Date of Publication" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x10 .
+
+km-dev:PredicateObjectMap_db4dfa03-b329-406e-bf79-5b5c21bec02a rr:objectMap _:node19jnkbkp6x10 .
+
+km-dev:TriplesMap_e9e8bb1c-834a-48c1-9880-db6d545b0403 rr:predicateObjectMap km-dev:PredicateObjectMap_db4dfa03-b329-406e-bf79-5b5c21bec02a .
+
+km-dev:PredicateObjectMap_db4dfa03-b329-406e-bf79-5b5c21bec02a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_db4dfa03-b329-406e-bf79-5b5c21bec02a .
+
+km-dev:TriplesMap_dbc0be77-c10f-4eca-8366-9221e406209f a rr:TriplesMap .
+
+_:node19jnkbkp6x1 km-dev:hasTriplesMap km-dev:TriplesMap_dbc0be77-c10f-4eca-8366-9221e406209f .
+
+km-dev:TriplesMap_dbc0be77-c10f-4eca-8366-9221e406209f km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x11 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasLogicalTable _:node19jnkbkp6x11 .
+
+km-dev:TriplesMap_dbc0be77-c10f-4eca-8366-9221e406209f rr:logicalTable _:node19jnkbkp6x11 ;
+	rr:subjectMap _:node19jnkbkp6x12 .
+
+_:node19jnkbkp6x1 km-dev:hasSubjectMap _:node19jnkbkp6x12 .
+
+_:node19jnkbkp6x12 km-dev:isPartOfMapping _:node19jnkbkp6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.europeana.eu/schemas/edm/Place1" ;
+	rr:class edm:Place ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "edm:Place1" .
+
+km-dev:PredicateObjectMap_b27f0b2a-597f-4a16-8a2a-95e2e2924030 rr:predicate skos:prefLabel .
+
+_:node19jnkbkp6x13 rr:column "Place of Publication" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x13 .
+
+km-dev:PredicateObjectMap_b27f0b2a-597f-4a16-8a2a-95e2e2924030 rr:objectMap _:node19jnkbkp6x13 .
+
+km-dev:TriplesMap_dbc0be77-c10f-4eca-8366-9221e406209f rr:predicateObjectMap km-dev:PredicateObjectMap_b27f0b2a-597f-4a16-8a2a-95e2e2924030 .
+
+km-dev:PredicateObjectMap_b27f0b2a-597f-4a16-8a2a-95e2e2924030 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b27f0b2a-597f-4a16-8a2a-95e2e2924030 .
+
+km-dev:TriplesMap_ddfbfa22-a2b9-43c7-80a4-90f84116a835 a rr:TriplesMap .
+
+_:node19jnkbkp6x1 km-dev:hasTriplesMap km-dev:TriplesMap_ddfbfa22-a2b9-43c7-80a4-90f84116a835 .
+
+km-dev:TriplesMap_ddfbfa22-a2b9-43c7-80a4-90f84116a835 km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x14 rr:tableName "titles-list-sample.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasLogicalTable _:node19jnkbkp6x14 .
+
+km-dev:TriplesMap_ddfbfa22-a2b9-43c7-80a4-90f84116a835 rr:logicalTable _:node19jnkbkp6x14 ;
+	rr:subjectMap _:node19jnkbkp6x15 .
+
+_:node19jnkbkp6x1 km-dev:hasSubjectMap _:node19jnkbkp6x15 .
+
+_:node19jnkbkp6x15 km-dev:isPartOfMapping _:node19jnkbkp6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.openarchives.org/ore/terms/Aggregation1" ;
+	rr:class ore:Aggregation ;
+	rr:template "{aggregation_uri}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_ceb87f99-749b-4e55-8ee0-36386ffc7de0 rr:predicate edm:aggregatedCHO .
+
+km-dev:RefObjectMap_9f8327bf-32d7-459b-a3ab-895b40ef504d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_00ce290b-7727-4144-a07e-4385a43b44a9 ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap km-dev:RefObjectMap_9f8327bf-32d7-459b-a3ab-895b40ef504d .
+
+km-dev:PredicateObjectMap_ceb87f99-749b-4e55-8ee0-36386ffc7de0 rr:objectMap km-dev:RefObjectMap_9f8327bf-32d7-459b-a3ab-895b40ef504d .
+
+km-dev:TriplesMap_ddfbfa22-a2b9-43c7-80a4-90f84116a835 rr:predicateObjectMap km-dev:PredicateObjectMap_ceb87f99-749b-4e55-8ee0-36386ffc7de0 .
+
+km-dev:PredicateObjectMap_ceb87f99-749b-4e55-8ee0-36386ffc7de0 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ceb87f99-749b-4e55-8ee0-36386ffc7de0 .
+
+km-dev:PredicateObjectMap_e967fd74-137a-420d-bef8-861c25431eeb rr:predicate edm:dataProvider .
+
+_:node19jnkbkp6x16 rr:constant "British Library" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasObjectMap _:node19jnkbkp6x16 .
+
+km-dev:PredicateObjectMap_e967fd74-137a-420d-bef8-861c25431eeb rr:objectMap _:node19jnkbkp6x16 .
+
+km-dev:TriplesMap_ddfbfa22-a2b9-43c7-80a4-90f84116a835 rr:predicateObjectMap km-dev:PredicateObjectMap_e967fd74-137a-420d-bef8-861c25431eeb .
+
+km-dev:PredicateObjectMap_e967fd74-137a-420d-bef8-861c25431eeb a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19jnkbkp6x1 .
+
+_:node19jnkbkp6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e967fd74-137a-420d-bef8-861c25431eeb .
