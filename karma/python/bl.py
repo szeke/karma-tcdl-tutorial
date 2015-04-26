@@ -1,4 +1,5 @@
-
+# Python scripts for modeling the British Library data 
+# using the DPLA ontology.
 
 def blAggregationUri(recordId):
     #return getTextHash(recordId)
