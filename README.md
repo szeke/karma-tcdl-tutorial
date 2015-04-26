@@ -14,5 +14,4 @@ Open Chrome:
 
 1. Go to `localhost:8080`
 
-
 Follow the instructions in the Wiki.
