@@ -1,7 +1,9 @@
 # karma-tcdl-tutorial
 Files for the Karma tutorial at TCDL, Texas Conference on Digital Libraries
 
-Starting Karma:
+## Starting Karma
+
+Here are instructions for starting Karma assuming that you installed the software in `c:\Local\Web-Karma-master`. Adjust as necessary depending on where you install Karma.
 
 1. Open a CMD prompt from the start menu
 2. cd c:\
