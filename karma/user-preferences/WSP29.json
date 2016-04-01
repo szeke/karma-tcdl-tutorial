@@ -1,0 +1,12 @@
+{
+    "ViewPreferences": {
+        "maxRowsToShowInNestedTables": 20,
+        "maxCharactersInHeader": 10,
+        "maxCharactersInCell": 200,
+        "defaultRowsToShowInTopTables": 150
+    },
+    "Commands": [{
+        "Command": "GenerateR2RMLModelCommandPreferences",
+        "PreferenceValues": {"modelSparqlEndPoint": "http://localhost:8080/openrdf-sesame/repositories/karma_models"}
+    }]
+}
