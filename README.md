@@ -16,4 +16,4 @@ Open Chrome:
 
 1. Go to `localhost:8080`
 
-Follow the instructions in the Wiki.
+Follow the instructions in the Wiki: https://github.com/szeke/karma-tcdl-tutorial/wiki
